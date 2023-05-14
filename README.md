@@ -1,6 +1,6 @@
-# 
+# Tambula-Tickit-API-Unibit
  
-##Problem Statement 
+## Problem Statement 
 1. Create Login API
 2. Create Tambula ticket Create API*(No of tickets will be variable not a fixed number).Return a Unique id on the   Creation of the ticket.
 3. Create a Tambula ticket fetch API to fetch all the ticket lists associated with the Respective ID with pagination.
@@ -13,8 +13,7 @@
     6. Each column must have at least 1 number
     7. Blank Cell fill by zero or “x”
 
-
-##Functionality 
+## Functionality 
 
 1. sign in and sign up using jwt
 2. Create Tambula ticket
@@ -22,7 +21,7 @@
 4. View all ticket with pagination and normal
 5. Delete ticket
 
-##Tools
+## Tools
 1. Node Js v-16.18.0
 2. Express Js
 3. Mongodb atlas
@@ -32,7 +31,7 @@
 7. tambola-generator (genrate ticket)
 
 
-##Setup in Local System
+## Setup in Local System
 
 1. git clone "https://github.com/tush8788/tambula-ticket-api-unibit"
 2. open command prompt and Type 'npm install' for download all dependencies
