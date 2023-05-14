@@ -4,7 +4,7 @@ const router = express.Router();
 //user
 router.use('/user',require('./user'));
 
-//tambula tickit 
+//tambula ticket 
 router.use('/tambula',require('./tambula'));
 
 module.exports=router;
