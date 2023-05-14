@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const dotenv = require('dotenv').config();
 
-mongoose.connect('mongodb://localhost/tumbula_api_unibit');
+mongoose.connect(process.env.MONGO_URL||'mongodb://localhost/tumbula_api_unibit');
 
 const db = mongoose.connection;
 

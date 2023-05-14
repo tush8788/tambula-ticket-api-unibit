@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const db = require('./config/mongoose');
 const passport = require('passport');
 const jwtStrategy = require('./config/passport-jwt-strategy');
+const dotenv = require('dotenv').config();
 const port = process.env.PORT||8000;
 
 const app = express();
