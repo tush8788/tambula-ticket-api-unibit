@@ -92,3 +92,32 @@ module.exports.viewAll=async function(req,res){
         })
     }
 }
+
+//delete ticket
+module.exports.deleteTicket = async function(req,res){
+    try{
+        //find ticket in DB
+        let ticket = await TicketDB.findById(req.params.id);
+        
+        //if ticket is not found or req user not match
+        if(!ticket || ticket.user != req.user.id){
+            return res.status(400).json({
+                message:"Ticket not Found or User not match"
+            })
+        }
+
+        //delete ticket
+        await ticket.deleteOne();
+        
+        //return res
+        return res.status(200).json({
+            message:"delete ticket successfully"
+        })
+    }
+    catch(err){
+        console.log(err);
+        return res.status(500).json({
+            message: "Internal Server Error",
+        })
+    }
+}

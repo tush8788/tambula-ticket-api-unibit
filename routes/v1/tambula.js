@@ -12,4 +12,7 @@ router.get('/:id',passport.authenticate('jwt',{session:false}),tambulaController
 //get all tickets
 router.get('/',passport.authenticate('jwt',{session:false}),tambulaController.viewAll);
 
+//delete ticket
+router.delete('/:id',passport.authenticate('jwt',{session:false}),tambulaController.deleteTicket);
+
 module.exports=router;
