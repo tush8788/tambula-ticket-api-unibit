@@ -41,3 +41,54 @@ module.exports.create = async function (req, res) {
         })
     }
 }
+
+//view specific ticket
+module.exports.viewSpecificTicket=async function(req,res){
+    try{
+        // console.log(req.params);
+        //id find in DB
+        let tambulaTicket =await TicketDB.findById(req.params.id);
+        
+        //if ticket not found and ticket user not match 
+        if(!tambulaTicket || tambulaTicket.user!=req.user.id){
+            return res.status(400).json({
+                message:"Unauthorize to Access or id not found in DB"
+            })
+        }
+        //return res
+        return res.status(200).json({
+            message:"Tambula Ticket",
+            tambulaTicket
+        })
+    }
+    catch(err){
+        console.log(err);
+        return res.status(500).json({
+            message: "Internal Server Error",
+        })
+    }
+}
+
+//view all tickets
+module.exports.viewAll=async function(req,res){
+    try{
+        //get page number and limit to show entrises on DB
+        let page=parseInt(req.query.page||0);
+        let limit=parseInt(req.query.limit||0);
+        
+        //find all entrise
+        let TambulaTickets = await TicketDB.find({user:req.user.id}).skip((page-1)*limit).limit(limit);
+        
+        //return res
+        return res.status(200).json({
+            message:"All Data",
+            TambulaTickets
+        })
+    }
+    catch(err){
+        console.log(err);
+        return res.status(500).json({
+            message: "Internal Server Error",
+        })
+    }
+}
