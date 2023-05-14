@@ -70,7 +70,7 @@
     
 
 6. View all tickets with pagination [authentication needed]
-  2. get req :- http://127.0.0.1:8000/v1/tambula/?page=1&limit=3 <-- Pagination
+   1. get req :- http://127.0.0.1:8000/v1/tambula/?page=1&limit=3 <-- Pagination
 
 8. delete ticket [authentication needed]
     1. delete req :- http://127.0.0.1:8000/v1/tambula/6460d2f26af6201e7cbc7c6e <--Ticket id</b>
