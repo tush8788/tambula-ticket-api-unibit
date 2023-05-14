@@ -38,8 +38,10 @@
 3. then just "npm start"/ if npm start is not work just run this command 'node index.js'
 4. then go localhost:8000
 
+
 # This Site is Hosted on render 
-1. 
+1. https://tambula-ticket-api.onrender.com/
+
 
 
 ## How to send authentication req
@@ -52,25 +54,25 @@
 
 ## API urls for users 
 1. create new user
-    1. post req :- http://127.0.0.1:8000/v1/user/create
-    2. filds :- email, password, confirmpassword
+    1. post req :- https://tambula-ticket-api.onrender.com/v1/user/create
+    2. filds :- email, password, confirmPassword
 
 2. login user
-    1. post req :- http://127.0.0.1:8000/v1/user/create-session
+    1. post req :- https://tambula-ticket-api.onrender.com/v1/user/create-session
     2. filds :- email, password
 
 3. Create Tambula Ticket [authentication needed]
-    1. get req :- http://127.0.0.1:8000/v1/tambula/create?count=4 <--how many tocken you want
+    1. get req :- https://tambula-ticket-api.onrender.com/v1/tambula/create?count=4 <--how many tocken you want
     
 4. View specific ticket [authentication needed]
-    1. put req :-http://127.0.0.1:8000/v1/tambula/6460d43f062bf8044fc977b4 <-- Ticket id
+    1. put req :-https://tambula-ticket-api.onrender.com/v1/tambula/6460d43f062bf8044fc977b4 <-- Ticket id
 
 5. View All tickets [authentication needed]
-    1. get req :- http://127.0.0.1:8000/v1/tambula/
+    1. get req :- https://tambula-ticket-api.onrender.com/v1/tambula/
     
 
 6. View all tickets with pagination [authentication needed]
-   1. get req :- http://127.0.0.1:8000/v1/tambula/?page=1&limit=3 <-- Pagination
+   1. get req :- https://tambula-ticket-api.onrender.com/v1/tambula/?page=1&limit=3 <-- Pagination
 
 8. delete ticket [authentication needed]
-    1. delete req :- http://127.0.0.1:8000/v1/tambula/6460d2f26af6201e7cbc7c6e <--Ticket id</b>
+    1. delete req :- https://tambula-ticket-api.onrender.com/v1/tambula/6460d2f26af6201e7cbc7c6e <--Ticket id</b>
