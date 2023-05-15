@@ -77,14 +77,4 @@ function generateTambulaTickets(numTickets) {
     return indices;
   }
   
-
-//   // Generate a single Tambula ticket
-//   const numTickets = 2;
-//   const tambulaTickets = generateTambulaTickets(numTickets);
-  
-//   // Display the ticket
-//   const ticket = tambulaTickets[0];
-//   console.log(ticket);
-  
-
   module.exports=generateTambulaTickets;
