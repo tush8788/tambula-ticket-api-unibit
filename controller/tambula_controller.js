@@ -1,5 +1,6 @@
-var tambola = require('tambola-generator').default;
+// var tambola = require('tambola-generator').default;
 const TicketDB = require('../models/ticket');
+const generateTickets = require('../config/Tambula-Ticket-gen');
 
 //create ticket
 module.exports.create = async function (req, res) {
@@ -10,18 +11,18 @@ module.exports.create = async function (req, res) {
         //convet string into mnumber
         TicketCount = parseInt(TicketCount);
 
-        //genrate tambula ticket 
-        let tickets = tambola.generateTickets(TicketCount);
+        let tickets = generateTickets(TicketCount);
+
         //create array to store ids of tickets
         let idArray = [];
 
         //retrive every ticket
         for (let i = 0; i < tickets.length; i++) {
-            
+           
             //create new ticket entry in DB
             let temp = await TicketDB.create({
                 user: req.user.id,
-                ticket: tickets[i]._entries
+                ticket: tickets[i]
             })
 
             //store id in idArray
